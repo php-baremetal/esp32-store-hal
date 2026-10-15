@@ -1,0 +1,33 @@
+{
+    "name": "php-baremetal/esp32-store-hal",
+    "description": "ESP32 store HAL for ext-store: NVS flash in its own partition.",
+    "type": "bm-hal",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gianfrancesco Aurecchia",
+            "email": "gianfri@aurecchia.com"
+        }
+    ],
+    "require": {
+        "php-baremetal/esp32-executor": "^1.0"
+    },
+    "provide": {
+        "php-baremetal/store-hal": "1.0.0"
+    },
+    "extra": {
+        "baremetal": {
+            "platform": "esp32",
+            "idf-requires": [
+                "nvs_flash"
+            ],
+            "partitions": [
+                {
+                    "name": "phpstore",
+                    "subtype": "nvs",
+                    "size": "24K"
+                }
+            ]
+        }
+    }
+}
