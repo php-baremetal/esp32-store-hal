@@ -4,7 +4,7 @@ The ESP32 side of [ext-store](package:php-baremetal/ext-store): it keeps the ext
 flash, in a partition of its own. Platform `esp32`; it provides the virtual `php-baremetal/store-hal`.
 
 You do not require this package. Require `php-baremetal/ext-store`, and conductor adds `esp32-store-hal` when the
-project's `extra.baremetal.sdk` is `esp32@^1.0`:
+project's `extra.baremetal.sdk` is `esp32@^2.0`:
 
 ```bash
 composer require php-baremetal/ext-store
